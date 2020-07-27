@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<!-- saved from url=(0064)https://mdbootstrap.com/live/_MDB/index/docs/skins/mdb-skin.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Required meta tags always come first -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Calculadora</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="./Material Design Bootstrap Template_files/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="./Material Design Bootstrap Template_files/compiled.min.css" rel="stylesheet">
+
+
+  <link rel="shortcut icon" href="img/icono.png" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="css/mdb.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="css/style.css" rel="stylesheet">
+  <!-- Font Awesome -->
+    <link rel="stylesheet" href="./Material Design Bootstrap Template_files/font-awesome.css">
+
+
+
+    <!-- Material Design Bootstrap -->
+    <link href="./Material Design Bootstrap Template_files/mdb.min.css" rel="stylesheet">
+
+
+
+
+
+
+
+<style type="text/css">/* Chart.js */
+@-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}
+</style>
+<style type="text/css">
+  .accordion.accordion-3 {
+  border-radius: 3px; }
+  .accordion.accordion-3 p {
+    font-size: 1rem; }
+  .accordion.accordion-3 .fa.fa-angle-down {
+    margin-top: -10px; }
+
+.accordion .animated-icon1 span {
+    background: #F44336;
+}
+input {display: block; padding: 0; margin: 0; border: 0; width: 100%;}
+td {margin: 0; padding: 0;}
+.form-controlBlanco {
+    display: block;
+    width: 100%;
+    height: calc(2.25rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: #243a51;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+</style>
+</head>
+
+<body class="fixed-sn mdb-skin">
+    
+    <!--Main layout-->
+
+
+
+<div class="modal fade right" id="ModalDangerBB" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="t`rue">
+  <div class="modal-dialog modal-notify modal-danger modal-side modal-top-right" role="document">
+    <!--Content-->
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header">
+        <p class="heading">Elevar Matriz B</p>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" class="white-text">&times;</span>
+        </button>
+      </div>
+      <!--Body-->
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-12">
+        <div class="md-form input-group">
+            <input type="search" class="form-control added-padding-2" placeholder="Ingrese Numero" id='ElevarB'>
+            <span class="input-group-btn">
+                <button class="btn btn-outline-success waves-effect my-0" type="button" onclick="Elevar('B')">Enviar!</button>
+            </span>
+        </div>
+          </div>
+        </div>
+      </div>
+      <!--Footer-->
+        </div>
+    <!--/.Content-->
+     </div>
+  </div>    
+   <br>     
+  <div class="accordion accordion-3 z-depth-1-half" id="accordionEx1" role="tablist" aria-multiselectable="true" >
+    <hr class="mb-0">
+    <!-- Accordion card -->
+    <div class="card">
+        <!-- Card header -->
+        <div class="card-header" role="tab" id="heading4">
+            <a data-toggle="collapse" data-parent="#accordionEx1" href="#collapse4" aria-expanded="true" aria-controls="collapse4">
+                <h3 class="mb-0 mt-3 red-text">
+                    INGRESE DATOS : <div class="animated-icon1 float-right mt-1"></div>
+                </h3>
+            </a>
+        </div>
+        <!-- Card body -->
+        <div id="collapse4" class="collapse show" role="tabpanel" aria-labelledby="heading4" data-parent="#accordionEx1">
+            <div class="card-body pt-0">
+                <div class="col-md-12">
+                  <div class="col-md-12" class='table-responsive'>
+                     <table id="my-tableA" class="table">
+                      <tbody>
+              
+                      </tbody>
+                      </table>
+                        <br>
+                  </div>
+                <div class="col-xs-12">
+
+                 <button type="submit" class="btn peach-gradient" class="col-md-2" onclick="limpiar('A')">Limpiar.</button>
+                 <button type="button" class="btn purple-gradient" class="col-md-2" onclick="appendRow('A')">+</button>
+                  <button type="button" class="btn blue-gradient" class="col-md-2" onclick="deleteRows('A')"><i class="fa fa-magic mr-1"></i> Fila</button>
+                 <button type="button" class="btn aqua-gradient" class="col-md-2" onclick="fcfs('A')">FCFS <i class="fa fa-magic mr-1"></i></button>
+                 <button type="button" class="btn aqua-gradient" class="col-md-2" onclick="spn('A')">SPN <i class="fa fa-magic mr-1"></i></button>
+             </div>
+             <!--<button type="button" class="col-md-4">Multiplicar por</button>
+             <button type="button" class="col-md-4">Matriz elevada a</button>-->
+          </div>
+            </div>
+        </div>
+    </div>
+    <!-- Accordion card -->
+
+    <!-- Accordion card -->
+    <div class="card">
+
+        <!-- Card header -->
+        <div class="card-header" role="tab" id="heading5" >
+            <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1" href="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                <h3 class="mb-0 mt-3 red-text">
+                    RESULTADO: <div class="animated-icon1 float-right mt-1"></div>
+                </h3>
+            </a>
+        </div>
+
+        <!-- Card body -->
+        <div id="collapse5" class="collapse" role="tabpanel" aria-labelledby="heading5" data-parent="#accordionEx1">
+            <div class="card-body pt-0">
+                <div class="col-md-12">
+                  <div class="col-md-12">
+                     <table id="my-tableB" class="table">
+                  <tbody>
+              
+                   </tbody>
+                  </table>
+                  <br>
+                  </div>
+          </div>
+            </div>
+        </div>
+    </div>
+    <!-- Accordion card -->
+     <!-- Accordion card -->
+      <div class="card" >
+
+        <!-- Card header -->
+        <div class="card-header" role="tab" id="heading6">
+            <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1" href="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                <h3 class="mb-0 mt-3 red-text">
+                    GRAFICO :  <div class="animated-icon1 float-right mt-1"></div>
+                </h3>
+            </a>
+        </div>
+
+        <!-- Card body -->
+        <div id="collapse6" class="collapse" role="tabpanel" aria-labelledby="heading6" data-parent="#accordionEx1">
+            <div class="card-body pt-0">
+                 <div class="col-md-12">
+          <div class="col-md-12" id="respuesta" class='table-responsive' >
+            <table id="my-tableR" class="table">
+          </table>
+          <br>
+          </div>
+          <br>
+        </div>
+            </div>
+        </div>
+    </div>
+    <!-- Central Modal Danger Demo-->
+    </div>    
+<div class="hiddendiv common"></div>
+<div class="drag-target" style="left: 0px; touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></div>
+
+
+    <!--/Main layout-->
+
+    <!--Footer-->
+    <!--/.Footer-->
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+
+    <script type="text/javascript" src="./Material Design Bootstrap Template_files/compiled.min.js.descarga"></script>
+    <script type="text/javascript" src="./js/matriz.js"></script>
+    <script>
+        // SideNav Initialization
+        $(".button-collapse").sideNav();
+        new WOW().init();
+    </script><div class="drag-target" style="left: 0px; touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></div>
+
+<div class="hiddendiv common"></div></body></html>
